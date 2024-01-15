@@ -5,6 +5,8 @@ is based on the
 [react/apollo-client example](https://github.com/dotansimha/graphql-code-generator/tree/master/examples/react/apollo-client)
 in `graphql-code-generator`.
 
+![Screenshot](assets/screenshot.png)
+
 ## Getting Started
 
 ### Development Build

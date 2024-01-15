@@ -3,4 +3,3 @@
 /.turbo/
 /node_modules/
 /src/generated/
-/public/mockServiceWorker.js
