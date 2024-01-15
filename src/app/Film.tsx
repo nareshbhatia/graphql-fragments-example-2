@@ -1,5 +1,10 @@
 import { graphql, useFragment, FragmentType } from '@/generated/gql';
 
+/*
+ * "fragment FilmItem" generates:
+ *   1. FilmItemFragment
+ *   2. FilmItemFragmentDoc
+ */
 export const FilmFragment = graphql(/* GraphQL */ `
   fragment FilmItem on Film {
     id

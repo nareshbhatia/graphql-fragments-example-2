@@ -5,9 +5,10 @@ import { useQuery } from '@apollo/client';
 import { Film } from './Film';
 
 /*
- * "query UserProfile" generates:
- *   1. UserProfileQuery
- *   2. UserProfileQueryVariables
+ * "query allFilmsWithVariablesQuery" generates:
+ *   1. AllFilmsWithVariablesQueryQuery
+ *   2. AllFilmsWithVariablesQueryQueryVariables
+ *   3. AllFilmsWithVariablesQueryDocument
  */
 const allFilmsWithVariablesQueryDocument = graphql(/* GraphQL */ `
   query allFilmsWithVariablesQuery($first: Int!) {
