@@ -1,4 +1,4 @@
-import { graphql, useFragment, FragmentType } from '@/generated/gql';
+import { graphql, getFragmentData, FragmentType } from '@/generated/gql';
 
 /*
  * "fragment FilmItem" generates:
@@ -15,7 +15,7 @@ export const FilmFragment = graphql(/* GraphQL */ `
 `);
 
 export function Film(props: { film: FragmentType<typeof FilmFragment> }) {
-  const film = useFragment(FilmFragment, props.film);
+  const film = getFragmentData(FilmFragment, props.film);
   return (
     <li className="flex flex-col p-4">
       <h2 className="font-semibold">{film.title}</h2>
