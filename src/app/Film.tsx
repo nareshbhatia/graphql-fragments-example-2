@@ -14,8 +14,12 @@ export const FilmFragment = graphql(/* GraphQL */ `
   }
 `);
 
-export function Film(props: { film: FragmentType<typeof FilmFragment> }) {
-  const film = getFragmentData(FilmFragment, props.film);
+export interface FilmProps {
+  film: FragmentType<typeof FilmFragment>;
+}
+
+export function Film({ film: filmProp }: FilmProps) {
+  const film = getFragmentData(FilmFragment, filmProp);
   return (
     <li className="flex flex-col p-4">
       <h2 className="font-semibold">{film.title}</h2>
